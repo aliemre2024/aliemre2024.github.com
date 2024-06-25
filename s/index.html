@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevgiliye Özel Köy Tanıtımı</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h2 id="header_text">Sevgiliye Özel Köy Tanıtımı</h2>
+    </div>
+    
+    <div class="map" id="map"></div>
+
+    <div class="photo">
+        <div class="archive">
+            <div id="allBtns"></div>
+        </div>
+        <div id="myDiv">
+            <div id="gaziler" class="photo_block">
+                <div class="image-container">
+                    <img class="gallery" src="photos/gaziler/evv1.jpeg" data-text="This is the text for evv1.jpeg">
+                    <button class="info-btn">i</button>
+                </div>
+                <div class="image-container">
+                    <img class="gallery" src="photos/gaziler/calinan-koyunlarv1.jpeg" data-text="This is the text for calinan-koyunlarv1.jpeg">
+                    <button class="info-btn">i</button>
+                </div>
+                <div class="image-container">
+                    <img class="gallery" src="photos/gaziler/calinan-koyunlarv2.jpeg" data-text="This is the text for calinan-koyunlarv2.jpeg">
+                    <button class="info-btn">i</button>
+                </div>
+                <!-- Add more images in the same way -->
+            </div>
+            <div id="korkuteli" class="photo_block">
+                <div class="image-container">
+                    <img class="gallery" src="photos/korkuteli/aile.jpg" data-text="This is the text for aile.jpg">
+                    <button class="info-btn">i</button>
+                </div>
+                <div class="image-container">
+                    <img class="gallery" src="photos/korkuteli/cikoftem.jpg" data-text="This is the text for cikoftem.jpg">
+                    <button class="info-btn">i</button>
+                </div>
+                <div class="image-container">
+                    <img class="gallery" src="photos/korkuteli/hilmi-usta.jpg" data-text="This is the text for hilmi-usta.jpg">
+                    <button class="info-btn">i</button>
+                </div>
+                <!-- Add more images in the same way -->
+            </div>
+            <div id="antalya" class="photo_block">
+                <!-- Add images or content here in the same way -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

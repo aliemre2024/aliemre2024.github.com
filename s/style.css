@@ -1,0 +1,100 @@
+body {
+    background-image: url('images/flower.jpg');
+    background-repeat: repeat;  
+    background-size: 100px;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.header {
+    height: 10%;
+    width: 70%;
+    text-align: center;
+    background-color: bisque;
+    margin: auto;
+}
+
+.map {
+    float: left;
+    width: 60%; 
+    height: 80%; 
+    margin: 2%;
+    border: 3px solid lightblue;
+}
+
+.photo {
+    background-color: brown;
+    width: 30%;
+    height: 80%;
+    margin: 2%;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 3px solid lightblue;
+    padding-top: 0;
+}
+
+.archive {
+    border-bottom: 2px solid lightblue;
+    height: 5%;
+    padding-top: 0;
+    margin-bottom: 3%;
+}
+
+#archive_text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.gallery {
+    padding: 3%;
+    width: 90%;
+}
+
+#header_text {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.photo_block {
+    display: none;
+}
+
+.photo_block.active {
+    display: block;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.info-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.text-block {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
