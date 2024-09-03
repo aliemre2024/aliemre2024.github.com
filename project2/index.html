@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>askoma özel</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <p><span v-html="currHeart" class="heart-display"></span></p>
+
+        <div id="game">
+            <div class="items-container">
+                <button 
+                    v-on:click="updateHealth(-8); hoverImage_move_forPoision(); hover_poisonSound()"
+                    class="left-items"
+                    v-on:mouseover="hoverImage_visualize('images/hover1.png')"
+                    v-on:mouseout="hoverImage_clean">
+                    <img src="images/bosver.png" class="button-image">
+                </button>
+                <button
+                    v-on:click="updateHealth(-1); hoverImage_move(); hover_slapSound()"
+                    class="left-items"
+                    v-on:mouseover="hoverImage_visualize('images/kick.png')"
+                    v-on:mouseout="hoverImage_clean">
+                    <img src="images/foot.jpg" class="button-image">
+                </button>
+                <button
+                    v-on:click="updateHealth(-1); hoverImage_move(); hover_slapSound()"
+                    class="left-items"
+                    v-on:mouseover="hoverImage_visualize('images/hover3.png')"
+                    v-on:mouseout="hoverImage_clean">
+                    <img src="images/slap.jpg" class="button-image">
+                </button>
+            </div>
+            
+            <div>
+                <img v-bind:src="currentHover" id="hover-image">
+                <img v-bind:src="currentImage" id="game-image">
+            </div>
+
+            <div class="items-container">
+                <button 
+                    v-on:click="updateHealth(-1); hoverImage_move(); hover_slapSound()"
+                    class="right-items"
+                    v-on:mouseover="hoverImage_visualize('images/hover4.png')"
+                    v-on:mouseout="hoverImage_clean">
+                    <img src="images/punch.jpg" class="button-image">
+                </button>
+                <button 
+                    v-on:click="updateHealth(+1); hoverImage_move(); hover_niceSound()"
+                    class="right-items"
+                    v-on:mouseover="hoverImage_visualize('images/hover5.png')"
+                    v-on:mouseout="hoverImage_clean">
+                    <img src="images/heart.jpg" class="button-image">
+                </button>
+                <button v-on:click="updateHealth(+8); hoverImage_move_forStars(); hover_loveSound()"
+                    class="right-items"
+                    v-on:mouseover="hoverImage_visualize('images/hover6.gif')"
+                    v-on:mouseout="hoverImage_clean">
+                    <img src="images/birlik.jpg" class="button-image">
+                </button>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
