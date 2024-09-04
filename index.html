@@ -3,172 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sevgiliye Özel Köy Tanıtımı</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
-    <link rel="stylesheet" href="style2.css">
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="script2.js" defer></script>
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: antiquewhite;
+        }
+        a {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 40px;
+            background-color: crimson;
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
-        <img id="emoji1" src="images/06.png" class="clickable" onclick="imageChanger()"> <!--alert('&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;&#128149;')-->
-        <h2 id="header_text">Sevgiliye Özel Köy Tanıtımı</h2>
-        <img id="emoji2" class="clickable" src="images/91.png" onclick="alert('Acik Adress&#128517;&#128517;\nGaziler Mahallesi 294 sok. no:71 Kepez/Antalya')">
-    </div>
-    
-    <div class="map" id="map"></div>
-
-    <div class="photo">
-        <div class="archive">
-            <div id="allBtns"></div>
-        </div>
-        <div id="myDiv">
-            <div id="gaziler" class="photo_block">
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/evv1.jpeg" data-lat="36.99688" data-lng="30.78599" 
-                    data-text="dedemle yengem davar yüzerkene babanenem &#128512;">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/calinan-koyunlarv1.jpeg" data-lat="36.99906" data-lng="30.78721" 
-                    data-text="Calinan koyunlarrr, en uzaktaki anasi calinmis kzuuya dikkat cekmek isterim &#128532;">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/calinan-koyunlarv2.jpeg" data-lat="36.99900" data-lng="30.78715" 
-                    data-text="Sakaaa, anesi calinmamis &#128517;">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/papiv1.jpg" data-lat="36.99697" data-lng="30.78584" 
-                    data-text="PAPİİ Dunyanin en tatli kopeki sunun masumiyete bakk">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/papiv2.jpg" data-lat="36.99690" data-lng="30.78582" 
-                    data-text="Ve güzel yani maximus av kopegi">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/pamukv1.jpg" data-lat="36.99733" data-lng="30.78536" 
-                    data-text="Birde şu orrrrrrrr cocuna bak nasil kuduz intihar etmesi gerekenelr tam liste 1 numara belediye olsam uyutmayı vazgeçerim direk kopek olup saldırırım oyleli, bikeresinde benim kanka komsunun kız kardesinin ayagınıa yapışmıs ldurcekmıs yani nurcan abam(kpegin sahibi) zor açmış agzını aptal köepk gercekten nedne boyle kopekler evrimlesiy bilmiyrum, yani sahsen boyle bir kpegim olsa ormana a salmam direk dövüsürüm yok ederim nefret kusarım efendisi olduğumu  sürekli hatırlatırım getir götürümü yaptırımım yemek vermem">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/dedemtarla1v1.jpg" data-lat="36.9967" data-lng="30.78587" 
-                    data-text="Dedemin bahce">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/evbati.jpeg" data-lat="36.99687" data-lng="30.78597" 
-                    data-text="Benim catidan gün batimi">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/evdenay.jpeg" data-lat="36.99687" data-lng="30.78597" 
-                    data-text="Benim evden ay dogumu">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/evdogu.jpeg" data-lat="36.99687" data-lng="30.78597" 
-                    data-text="Kutukler, bikeresinde burda yangın cikmisti babamlar tum mahalle ondurmaye geldi ben lol oynamaya defvam etdiydim, burada bu foto a çatıdan p kadar yakın yanni ölmedik">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/evguney.jpeg" data-lat="36.99687" data-lng="30.78597" 
-                    data-text="Buda dunyanin en kotu koyu hic yesillik yok tamamen beyaz">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/evguneydogu.jpeg" data-lat="36.99687" data-lng="30.78597" 
-                        data-text="Ayni yani">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/kumrular.jpeg" data-lat="36.99686" data-lng="30.78596" 
-                    data-text="Ucmak üzere sandigim kumrular 3 gün gecti halen ucmadilar">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/ikilisera.jpeg" data-lat="36.99639" data-lng="30.78552" 
-                    data-text="bunlaa bizim sera, ve gunbatimmi">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/ejermeyvesi.jpeg" data-lat="36.99679" data-lng="30.78619" 
-                    data-text="dedemin ejdermeyveleri ">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/harunlaben.jpeg" data-lat="36.99657" data-lng="30.78638" 
-                    data-text="Bıladerle ben &#128518;&#128518;&#128518;&#128518;&#128518;">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/harun.jpeg" data-lat="36.996" data-lng="30.78703" 
-                    data-text="harun dedi buraya çıkabiliyom ben izle, sonra çıkamadı gotunden ittirdim oyle çıktı kendim çıkmaya calıstım cikamadım, sonra dedim harun tepeenbenim bi fotografimi cek o da dedi tama attım telefonunu diğer taraffında dusstu yıgının, almaya gidiyoken bi fare gordumm korkuçtu kosarak kaçtık">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/dortkuteker.jpeg" data-lat="36.99539" data-lng="30.78698" 
-                    data-text="Bu dört yuvarlaklı birsey ilk izlenimleim saman yapmaya ya da buğay tplamaya yardığına yönelik">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/manzara.jpeg" data-lat="36.99524" data-lng="30.78699" 
-                    data-text="Burada çalıların ardında aptal kapitalizmin ürettiği sauronun gözünün saklandığı mekan uzaktan bi foto cekersem koyayım kuleyi de gör canim">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/gaziler/camurluakrdes.jpg" data-lat="36.99484" data-lng="30.78140" 
-                    data-text="camurlu harun 2 3 yıl onca ama güzelbı foto">
-                    <button class="info-btn">i</button>
-                </div>
-            </div>
-            
-            <div id="korkuteli" class="photo_block">
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/aile.jpg" data-lat="37.06692" data-lng="30.19533" 
-                    data-text="bubenim aile ama sen eksiksinn &#128525&#128525&#128525&#128525, harun nedenn boyle bilemiyorum">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/cikoftem.jpg" data-lat="37.06586" data-lng="30.20042" 
-                    data-text="Cİkoftemm">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/hilmi-usta.jpg" data-lat="37.06604" data-lng="30.2002" 
-                    data-text="hilmi? bu foto kalkmalli">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/depo.jpeg" data-lat="37.06312" data-lng="30.21536" 
-                    data-text="bu bizim apartmanın altı şuanlık çok korkunc">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/nehirsizkopru.jpeg" data-lat="37.0631" data-lng="30.21618" 
-                    data-text="tek güzel şey bu olabilirdi korkutelinde ama bunun da suyu yok napalım">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/pasliplaka.jpeg" data-lat="37.06652" data-lng="30.19607" 
-                    data-text="carsidaki isleri hallederken güzel bişey gözüme çarparmı diye bakıyodum en güzel bu paslı plakaydı oyle diyim">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/yamanpark.jpeg" data-lat="37.06169" data-lng="30.2171" 
-                    data-text="bu yamana park, saat 5ten sonra dedeler okeye oturuyo, torunlar futbol oynuyo">
-                    <button class="info-btn">i</button>
-                </div>
-                <div class="image-container">
-                    <img class="gallery" src="photos/korkuteli/baraj.jpg" data-lat="37.08005" data-lng="30.16554" 
-                    data-text="aslına baraja cıkabilem güzelliği var yani, kar yağdığında kaymak intihar yontemlerinde ilk 5 felan">
-                    <button class="info-btn">i</button>
-                </div>
-            </div>           
-        </div>
-    </div>
+    <a href="project1/index.html">project1</a>
+    <a href="project2/index.html">project2</a>
 </body>
 </html>
